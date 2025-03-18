@@ -34,7 +34,8 @@
                         <size x="0.05" y="1.5" z="1.8" />
                     </drawbox>
                     <setmkbound mk="5" />
-                    <drawfilestl file="Flap_rotated_finer.stl">
+                    <drawfilestl file="Flap.stl">
+                        <drawrotate angx="0" angy="10" angz="0" />
                         <drawmove x="-1.0" y="0" z="0" />
                     </drawfilestl>
                     <fillbox x="-1.0" y="0" z="0.5">
@@ -56,7 +57,6 @@
             <floating mkbound="5" relativeweight="0.2074">
                 <center x="-1" y="0" z="0.33" />
                 <inertia x="1.0" y="1.0" z="1.0" />
-                <angularvelini x="0" y="5" z="0" units_comment="rad/s" />
             </floating>
         </floatings>
         <motion>
@@ -91,7 +91,6 @@
                 <!-- Floating Body (Flap) -->
                 <bodyfloating id="flap" mkbound="5">
                     <floating relativeweight="0.2074">
-                        <angularvelini x="0" y="5" z="0" units_comment="rad/s" />
                     </floating>
                 </bodyfloating>
                 <link_hinge idbody1="flap">
@@ -124,14 +123,14 @@
             <parameter key="DtFixed" value="0" comment="Fixed Dt value. Use 0 to disable (default=disabled)" units_comment="seconds" />
             <parameter key="DtFixedFile" value="NONE" comment="Dt values are loaded from file. Use NONE to disable (default=disabled)" units_comment="milliseconds (ms)" />
             <parameter key="DtAllParticles" value="0" comment="Velocity of particles used to calculate DT. 1:All, 0:Only fluid/floating (default=0)" />
-            <parameter key="TimeMax" value="10.0" comment="Time of simulation" units_comment="seconds" />
+            <parameter key="TimeMax" value="8" comment="Time of simulation" units_comment="seconds" />
             <parameter key="TimeOut" value="0.1" comment="Time out data" units_comment="seconds" />
             <parameter key="PartsOutMax" value="1" comment="%/100 of fluid particles allowed to be excluded from domain (default=1)" units_comment="decimal" />
             <parameter key="RhopOutMin" value="700" comment="Minimum rhop valid (default=700)" units_comment="kg/m^3" />
             <parameter key="RhopOutMax" value="1300" comment="Maximum rhop valid (default=1300)" units_comment="kg/m^3" />
             <simulationdomain comment="Defines domain of simulation (default=Uses minimun and maximum position of the generated particles)">
-                <posmin x="default" y="default" z="default" comment="e.g.: x=0.5, y=default-1, z=default-10%" />
-                <posmax x="default" y="default" z="default" />
+            <posmin x="default" y="default" z="default" comment="e.g.: x=0.5, y=default-1, z=default-10%" />
+            <posmax x="default" y="default" z="default" />
             </simulationdomain>
         </parameters>
     </execution>
