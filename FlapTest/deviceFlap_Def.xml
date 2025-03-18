@@ -25,8 +25,8 @@
                 <mainlist>
                     <setshapemode>real | dp | bound</setshapemode>
                     <setdrawmode mode="full" />
-                    <setmkbound mk="0" />
-                    <drawfilestl file="Tank.stl" />
+                    <setmkbound mk="0" normallayers="3" />
+                    <drawfilestl file="Tank_thicker.stl" />
                     <setmkbound mk="10" />
                     <drawbox>
                         <boxfill>solid</boxfill>
