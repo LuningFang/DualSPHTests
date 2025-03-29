@@ -10,7 +10,7 @@
             <speedsystem value="0" auto="true" comment="Maximum system speed (by default the dam-break propagation is used)" />
             <coefsound value="30" comment="Coefficient to multiply speedsystem" />
             <speedsound value="0" auto="true" comment="Speed of sound to use in the simulation (by default speedofsound=coefsound*speedsystem)" />
-            <coefh value="1.5" comment="Coefficient to calculate the smoothing length (h=coefh*sqrt(3*dp^2) in 3D)" />
+            <coefh value="1.25" comment="Coefficient to calculate the smoothing length (h=coefh*sqrt(3*dp^2) in 3D)" />
             <cflnumber value="0.2" comment="Coefficient to multiply dt" />
         </constantsdef>
         <mkconfig boundcount="230" fluidcount="9">
@@ -34,10 +34,10 @@
 
         <newvarcte scale="1" />
 
-                <newvarcte timeOut="expectedPeriod/40"/>
+                <newvarcte timeOut="expectedPeriod/20"/>
 
 
-                <newvarcte initialDraft="-0.060-0.15+0.0760"/>
+                <newvarcte initialDraft="-0.060-0.15+0.0760-0.4"/>
                 <newvarcte radius="0.15" _rem="radius"/>
                 <newvarcte Dp="radius/10" />
 

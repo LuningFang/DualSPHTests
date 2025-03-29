@@ -12,7 +12,7 @@ set diroutdata=%dirout%\data
 
 rem "executables" are renamed and called from their directory
 
-set dirbin=../../../DualSPHysics_v5.2/bin/windows
+set dirbin=../../DualSPHysics_v5.2/bin/windows
 set gencase="%dirbin%/GenCase_win64.exe"
 set dualsphysicscpu="%dirbin%/DualSPHysics5.2CPU_win64.exe"
 set dualsphysicsgpu="%dirbin%/DualSPHysics5.2_win64.exe"
